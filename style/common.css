@@ -37,6 +37,16 @@ p{
     margin: 0 auto;
 }
 
+.mo{
+    display: none;
+}
+.sns{
+    display: flex;
+    gap: 1rem;
+}
+.sns img{
+    gap: 1.2rem;
+}
 @media (max-width:1440px){
     html{
         font-size: var(--basic-font-tab);
@@ -49,6 +59,7 @@ p{
 }
 
 @media (max-width:768px){
+    .mo {display: block;}
     html{
         font-size: var(--basic-font-mo);
     }
