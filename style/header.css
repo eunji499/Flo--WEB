@@ -1,12 +1,16 @@
 
     header{
-        
         padding-bottom: 2rem;
         background-color: #fff;
         max-height: 100px;
         overflow: hidden;
         box-sizing: border-box;
         transition: all 0.5s ease 0s;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
 
     }
     header:hover{
@@ -57,7 +61,8 @@
         align-items: center;
     }
 
-.smart-header{display: none;}
+.smart-header{display: none;
+}
 .menu-smart-hidden{display: none;}
 .btn-close img{
     height: 1.2rem;
@@ -71,6 +76,7 @@
 
 @media all and (max-width:1440px){
     .menu-smart-hidden{
+        
         transform: translateX(100%);
         /* transition: all 0.7s ease 0s;
         filter: blur(50px);
@@ -86,9 +92,17 @@
     }
     header{
         display: none;
+        
     }
     .smart-header{ 
-        display: block;}
+        display: block;
+        background-color: #fff;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        }
 
     .smart-header .common-frame{
         
@@ -99,6 +113,8 @@
 
     .smart-header .logo img{
         height: 5rem;
+        
+        
     }
 
     .smart-header .btn-menu{
@@ -107,6 +123,7 @@
         top: 50%;
         transform: translateY(-50%);
         line-height: 0;
+
     }
 
     .smart-header .common-frame .btn-menu img {

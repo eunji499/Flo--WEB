@@ -9,10 +9,17 @@
     <link rel="stylesheet" href="./style/system.css">
     <link rel="stylesheet" href="./style/common.css">
     <link rel="stylesheet" href="./style/header.css">
+    
     <script src="./script/header.js"></script>
+    <!-- swiper js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    
+    <link rel="stylesheet" href="./style/index.css">
     
 </head>
 <body>
+    <!-- 스마트 기기에서 보이는 메뉴 -->
     <div class="menu-smart-hidden">
         <div class="meun-top">
             <div class="common-frame">
@@ -25,7 +32,7 @@
 
 
 
-
+        <!-- PC용 헤더 -->
         <div class="meun-content">
             <div class="common-frame">
                  <ul class="gnb-smart">
@@ -76,7 +83,7 @@
 
 
 
-
+        
          <div class="menu-sns common-frame">
             <ul class="sns">
                     <li>
@@ -164,7 +171,7 @@
     </header>
 
 
-
+    <!-- 스마트 기기용 해더 -->
     <div class="smart-header">
         <div class="common-frame">
             <div class="logo">
@@ -173,5 +180,56 @@
             <span class="btn-menu"><a href="#"><img src="./img/Menu.svg" alt="전체메뉴버튼"></a></span>
         </div>
     </div>
+
+    <!-- 전체 컨텐츠 -->
+    <main>
+        <!-- 히어로 배너 -->
+        <!-- Slider main container -->
+            <div class="swiper hero-slider">
+                <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="./img/slider-1pc.jpg" alt="flo 신제품 커피 배너" class="pc">
+                            <img src="./img/slider-1-tab.jpg" alt="flo 커피& 하이볼 배너" class="tab">
+                            <img src="./img/slider-1-mo.jpg" alt="flo 맥주 배너" class="mo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/slider-2pc.jpg" alt="flo 신제품 커피 배너" class="pc">
+                            <img src="./img/slider-2-tab.jpg" alt="flo 커피& 하이볼 배너" class="tab">
+                            <img src="./img/slider-2-mo.jpg" alt="flo 맥주 배너" class="mo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/slider-3pc.jpg" alt="flo 신제품 커피 배너" class="pc">
+                            <img src="./img/slider-3-tab.jpg" alt="flo 커피& 하이볼 배너" class="tab">
+                            <img src="./img/slider-3-mo.jpg" alt="flo 맥주 배너" class="mo">
+                        </div>
+                    </div>
+                <div class="pagination"></div>
+            </div>
+            <script>
+                const heroSwiper = new Swiper('.swiper', {
+                    // Optional parameters
+                    // direction: 'vertical',
+                    loop: true,
+
+                    // If we need pagination
+                    pagination: {
+                        el: '.pagination',
+                    },
+
+                    // Navigation arrows
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+
+                    // And if we need scrollbar
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                    },
+                    });
+            </script>
+    </main>
 </body>
-</html>
+</html> 
