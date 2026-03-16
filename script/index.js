@@ -1,20 +1,18 @@
 const swiper = new Swiper('.swiper', {
-  // Optional parameters
   direction: 'vertical',
   loop: true,
-
-  // If we need pagination
+  autoplay: {
+    delay: 3000, // 1초마다 자동 전환
+    disableOnInteraction: false,
+  },
+  effect: 'slide', // 'fade' 등으로 변경 가능
   pagination: {
     el: '.swiper-pagination',
   },
-
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-
-  // And if we need scrollbar
   scrollbar: {
     el: '.swiper-scrollbar',
   },

@@ -1,6 +1,7 @@
 .hero-slider{
     width: 100%;
     height:calc(100vh - 100px) ;
+  
 }
 
 .hero-slider .swiper-slide img{
@@ -17,7 +18,6 @@
     position: absolute;
     bottom: 2rem;
     z-index: 10;
-    
 
 }
 
@@ -34,6 +34,152 @@
 .pagination>span .hero-slider .swiper-pagination-bullet-active{
     background: var(--pm-color-500);
 }
+
+.story .common-frame{
+    margin: 0 auto;
+}
+
+.story .common-frame .bigtitle{
+    margin:7rem 0;
+    font-size: var( --fs-h1);
+    text-align: center;
+    color: var(--pm-color-500);
+    position: relative;
+
+}
+
+.story.common-frame.img-story {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    right: 50px;
+    
+}
+
+.img-story>img{
+    max-width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+.story-content{
+   width: 760px;
+   position: absolute;
+   right: 148px;
+   margin-top: 3.5rem;
+}
+.story-content h1{
+    font-size: var(--fs-h2);
+    color: var(--pm-color-500);
+    margin-bottom: 1rem;
+}
+
+.story-content p{
+    font-size: var(--fs-p);
+    color:#000;
+    margin-bottom: 1rem;
+    font-weight: var(--fw-med);
+}
+
+.story .phiro{
+    margin: 50rem auto;
+    width: 1678px;
+}
+
+.story .phiro .phiro-list{
+    display: flex;
+    gap: 1rem;
+    text-align: center;
+}
+
+.phiro-list .cht1{
+    border: 1px solid blue;
+    width: 492px;
+    height: 492px;
+    border-radius: 50%;
+    background: var(--pm-color-100);
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.cht1 .typo{
+    margin-top: 6.5rem;
+}
+.cht1 p{
+    margin-bottom: 2rem;
+    font-weight: var(--fw-reg);
+}
+
+.phiro-list .cht2{
+    border: 1px solid blue;
+    width: 492px;
+    height: 492px;
+    border-radius: 50%;
+    background: var(--pi-color-300);
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.cht2 .typo{
+    margin-top: 6.5rem;
+}
+.cht2 p{
+    margin-bottom: 1rem;
+    font-weight: var(--fw-reg);}
+
+.phiro-list .cht3{
+    border: 1px solid blue;
+    width: 492px;
+    height: 492px;
+    border-radius: 50%;
+    background: var(--pm-color-100);
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.cht3 .typo{
+    margin-top: 6.5rem;
+}
+.cht3 .typo p{
+    margin-bottom: 1rem;
+    font-weight: var(--fw-reg);}
+
+.class{
+    border: red solid 1px;
+    width: 100vw;
+    height: 1530px;
+    background: var(--pm-color-600);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width:1440px){
     .hero-slider{
