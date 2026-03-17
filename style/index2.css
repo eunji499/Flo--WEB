@@ -1,0 +1,178 @@
+  /* 기본 스타일 초기화 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            padding-bottom: 100px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- 상단 제목 및 메뉴 --- */
+        .header-section {
+            text-align: center;
+            margin: 60px 0 80px;
+        }
+
+        .header-section h1 {
+            color: #3B6BDB;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .header-section h2 {
+            color: #3B6BDB;
+            font-size: 1rem;
+            font-weight: normal;
+            margin-bottom: 30px;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .nav-menu span.divider {
+            color: #F8BE2D; /* 노란색 세로줄 */
+        }
+
+        /* --- 제품 섹션 공통 스타일 --- */
+        .product-item {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 120px;
+        }
+
+        /* 두 번째 제품은 좌우 반전 */
+        .product-item.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .product-text {
+            flex: 1;
+        }
+
+        .product-image-container {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 500px;
+        }
+
+        /* --- 제품 텍스트 상세 스타일 --- */
+        .product-title {
+            color: #3B6BDB;
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        .product-subtitle {
+            color: #3B6BDB;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .product-line {
+            height: 2px;
+            background-color: #3B6BDB;
+            margin-bottom: 30px;
+        }
+
+        .quote {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            word-break: keep-all;
+        }
+
+        .specs {
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        /* Mood / Taste 아이콘 스타일 */
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #D6E3FA;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .feature-text {
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        /* --- 제품 이미지 및 배경 그래픽 --- */
+        .product-image-container img {
+            position: relative;
+            z-index: 2; /* 배경보다 앞으로 오도록 설정 */
+            max-width: 80%;
+            height: auto;
+        }
+
+        /* CSS로 만든 별 모양 배경 (clip-path 사용) */
+        .star-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .star-bg.yellow {
+            background-color: #FFD500;
+            /* 불규칙한 다각형 모양 생성 */
+            clip-path: polygon(50% 0%, 65% 25%, 100% 20%, 80% 50%, 100% 80%, 65% 75%, 50% 100%, 35% 75%, 0% 80%, 20% 50%, 0% 20%, 35% 25%);
+        }
+
+        .star-bg.blue {
+            background-color: #8BAAF3;
+            /* 불규칙한 다각형 모양 생성 */
+            clip-path: polygon(50% 5%, 70% 20%, 95% 35%, 75% 60%, 85% 95%, 50% 80%, 15% 95%, 25% 60%, 5% 35%, 30% 20%);
+        }
