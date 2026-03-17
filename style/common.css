@@ -45,9 +45,7 @@ p{
     display: flex;
     gap: 1rem;
 }
-.sns img{
-    gap: 1.2rem;
-}
+
 main{
     margin-top: 100px;
 }

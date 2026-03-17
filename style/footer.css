@@ -1,0 +1,141 @@
+
+/* 푸터 전체 컨테이너 설정 */
+.site-footer {
+  background-color: var(--pm-color-800); 
+  color: #ffffff;
+  padding: 3rem 0;
+}
+
+.footer-inner {
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* 상단 링크 및 소셜 아이콘 */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.policy-links {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.policy-links li {
+  color: #e0e6f2; /* 약간 옅은 흰색 */
+}
+
+.policy-links .separator {
+  margin: 0 .5rem;
+  color: #8fa7d3; /* 구분선 색상 */
+}
+
+.policy-links .highlight {
+  color: #ffc83d; /* 개인정보처리방침 노란색 포인트 */
+  font-weight: 600;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons a {
+  font-size: 20px;
+  color: #ffffff;
+  transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover {
+  opacity: 0.7;
+}
+
+.social-icons img {
+  filter: brightness(0) invert(1);
+}
+
+/* 중단 사이트맵 */
+.footer-middle {
+  display: flex;
+  justify-content: flex-start;
+  gap: 4rem; 
+  margin-bottom: 80px;
+}
+
+.sitemap-col h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.sitemap-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sitemap-col a {
+  font-size: 14px;
+  color: #e0e6f2;
+  transition: color 0.3s ease;
+}
+
+.sitemap-col a:hover {
+  color: #ffffff;
+}
+
+/* 하단 사업자 정보 및 로고 */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+
+.company-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+}
+
+.info-row .title {
+  width: 100px;
+  color: #e0e6f2;
+}
+
+.info-row .desc {
+  width: 250px; 
+}
+
+.footer-logo {
+  text-align: right;
+}
+
+.footer-logo img {
+  object-fit: contain;
+}
+
+.footer-logo p {
+  font-size: 13px;
+  color: #e0e6f2;
+  text-align: center;
+
+}
+
+/* 4. 최하단 저작권 */
+.footer-copyright {
+  text-align: center;
+  font-size: 13px;
+  color: #aebce0;
+}
