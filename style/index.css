@@ -472,6 +472,90 @@
     height: 1300px; }
 
 
+    
+/* --- 태블릿 기기용 (1024px 이하) 반응형 스타일 --- */
+@media (max-width: 1440px) {
+    
+    /* 1. 컨테이너 고정 너비 해제 및 여백 설정 */
+    .container2, 
+    .product-item {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    /* 2. OUR STORY 섹션 조정 */
+    .story-content {
+        gap: 30px;
+    }
+    .story-image {
+        width: 50%; /* 이미지가 화면의 절반만 차지하도록 변경 */
+        height: auto;
+    }
+    .story-image img {
+        margin-bottom: 0; 
+    }
+    .story-text {
+        width: 50%;
+        padding-top: 0;
+    }
+    .story-text h2 {
+        font-size: 2.5rem; /* 태블릿에 맞춰 폰트 크기 축소 */
+        padding-top: 0;
+    }
+
+    /* 3. Circles 섹션 크기 축소 */
+    .circles-section {
+        gap: 15px;
+        margin-bottom: 80px;
+    }
+    .circle {
+        width: 240px;
+        height: 240px;
+        padding: 15px;
+    }
+    .circle h4 { font-size: 1rem; }
+    .circle span { margin-bottom: 1rem; }
+    .circle p { font-size: 0.8rem; }
+
+    /* 4. HAPPENINGS 섹션 세로 정렬 (Flex-direction 변경) */
+    .happenings-grid {
+        flex-direction: column; /* 세로로 쌓이도록 변경 */
+        align-items: center;
+    }
+    .happenings-grid img, 
+    .happenings-text-box {
+        width: 100%;
+        max-width: 600px; /* 너무 커지지 않도록 최대 너비 제한 */
+        height: auto;
+    }
+    .happenings-text-box {
+        padding: 30px 20px;
+    }
+
+    /* 5. 시그니처 메뉴 라인 바꿈 허용 */
+    .nav-menu {
+        gap: 2rem;
+        flex-wrap: wrap; /* 좁아지면 다음 줄로 넘어가도록 설정 */
+    }
+    .nav-menu li {
+        padding: 0 15px;
+    }
+
+    /* 6. 상품 소개 섹션 너비 및 폰트 조정 */
+    .product-item {
+        gap: 2rem; /* 이미지와 텍스트 사이 간격 축소 */
+    }
+    .product-title {
+        font-size: 4rem;
+        width: 100%;
+    }
+    .product-image-container {
+        width: 50%; /* 고정된 1500px 너비를 해제하고 절반만 차지하도록 변경 */
+        height: auto;
+        min-height: 400px;
+    }
+}
 
 
 
