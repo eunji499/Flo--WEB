@@ -27,6 +27,4 @@ btnMores.forEach((span)=>{
 })
 
 
-
-
 })

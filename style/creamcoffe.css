@@ -1,0 +1,224 @@
+ body {
+  padding-top: 120px;
+}
+       /* 공통 스타일 */
+        .container {
+            width: 100%;
+            max-width: 1000px; /* 전체 너비 제한 */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 섹션 제목 스타일 */
+        .section-title {
+            color: #007bff; /* 파란색 제목 */
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 50px;
+        }
+
+        /* 헤더 (메뉴) */
+        .menu2dep{
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .menu2dep h1 {
+            color: #007bff;
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            margin-top: 5rem;
+        }
+
+        .menu-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding-bottom: 10px;
+        }
+
+        .menu-tabs a {
+            font-size: 13px;
+            color: #666;
+            padding-bottom: 10px;
+        }
+
+        /* 선택된 탭 스타일 */
+        .menu-tabs a.active {
+            color: #e6a23c; /* 주황색 */
+            font-weight: 500;
+        }
+
+        /* 메인 콘텐츠 */
+        main {
+            padding: 50px 0;
+        }
+
+        /* 그리드 시스템 */
+        .product-grid {
+            display: grid;
+            gap: 30px;
+        }
+
+        /* Canned Beer 그리드 (3x2) */
+        .beer-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        /* MD 상품 그리드 (3x1) */
+        .md-grid {
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 50px;
+        }
+
+        /* 상품 카드 스타일 */
+        .product-card {
+            background-color: #fff;
+            text-align: left;
+        }
+
+        .product-card .image-wrapper {
+            position: relative;
+            margin-bottom: 15px;
+            overflow: hidden;
+            background-color: #f9f9f9; /* 임시 배경색 */
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+                /* 부모 요소 설정: 자식 이미지들이 겹칠 수 있는 기준점이 됩니다 */
+        .image-hover-wrapper {
+            position: relative; /* 필수: 자식의 absolute 포지션 기준이 됨 */
+            width: 100%;        /* 카드 너비에 맞춰 이미지가 반응형으로 늘어나게 합니다 */
+            aspect-ratio: 3 / 4; /* 이미지 비율 고정 (가로:세로) */
+            overflow: hidden;   /* 영역을 벗어나는 이미지를 숨깁니다 */
+            cursor: pointer;    /* 마우스를 올리면 손가락 모양으로 바뀝니다 */
+        }
+
+        /* 두 이미지 공통 스타일: 겹치게 만들고 부드러운 효과를 줍니다 */
+        .image-hover-wrapper img {
+            position: absolute; /* 부모 요소를 기준으로 이미지를 겹치게 배치합니다 */
+            top: 0;
+            left: 0;
+            width: 100%;        /* 부모 컨테이너 크기에 딱 맞춥니다 */
+            height: 100%;
+            object-fit: cover;  /* 이미지가 비율을 유지하며 영역을 꽉 채우게 합니다 */
+            transition: opacity 0.4s ease-in-out; /* 0.4초 동안 투명도가 부드럽게 변하는 애니메이션 설정 */
+        }
+
+        /* 기본 이미지(위층) 설정 */
+        .default-img {
+            z-index: 2; /* 숫자가 클수록 위로 올라옵니다. 기본 이미지를 위로 올립니다. */
+        }
+
+        /* 마우스를 올렸을 때(:hover)의 동작 */
+        /* wrapper에 마우스가 올라가면, 그 안의 default-img의 투명도를 0으로 만듭니다 */
+        .image-hover-wrapper:hover .default-img {
+            opacity: 0; /* 기본 이미지가 투명해지면서 아래의 hover-img가 보입니다 */
+        }
+        /* Best 배지 */
+        .badge-best {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 10; /* 이미지 위로 올라오도록 설정 */
+            background-color: #007bff;
+            color: #fff;
+            font-size: 10px;
+            font-weight: bold;
+            padding: 6px 10px;
+            border-radius: 50px;
+        }
+
+        /* 상품 상세 정보 */
+        .product-details {
+            padding: 0 5px;
+        }
+
+        .product-details h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #007bff; /* 파란색 상품명 */
+            margin-bottom: 3px;
+        }
+
+        .product-details .price {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .product-details .description {
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        /* Taste 구분선 및 텍스트 */
+        .taste-info {
+            font-size: 11px;
+            color: #888;
+            border-top: 1px solid #ddd;
+            padding-top: 5px;
+        }
+
+        .taste-info strong {
+            color: #666;
+            margin-right: 5px;
+        }
+
+        /* 페이지네이션 */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        .pagination a {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* 활성화된 페이지 */
+        .pagination a.active {
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* 반응형 설정 (모바일) */
+        @media (max-width: 768px) {
+            .beer-grid, .md-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2열로 변경 */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .beer-grid, .md-grid {
+                grid-template-columns: 1fr; /* 1열로 변경 */
+            }
+        }

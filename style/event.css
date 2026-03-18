@@ -1,0 +1,136 @@
+  body {
+        padding-top: 120px;}
+ .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        /* 상단 헤더 및 탭 메뉴 */
+        .event-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .event-header h1 {
+            color: #4a80f6; /* 파란색 */
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+        .tab-menu {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .tab-menu a {
+            font-size: 14px;
+            font-weight: 500;
+            color: #555;
+        }
+        .tab-menu a.active {
+            color: #e6a23c; /* 노란/주황색 */
+        }
+
+        /* 뉴스 섹션 타이틀 */
+        .news-title-area {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .news-title-area h2 {
+            color: #4a80f6;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .news-title-area p {
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* 3열 그리드 레이아웃 */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        /* 💡 핵심: 호버 효과가 적용되는 카드 스타일 */
+        .news-card {
+            position: relative; /* 자식 요소(오버레이)의 기준점 설정 */
+            overflow: hidden;   /* 영역을 벗어나는 요소 숨김 */
+            aspect-ratio: 1 / 1.1; /* 이미지 비율 설정 (가로1 : 세로1.1) */
+            border-radius: 4px; /* 모서리를 살짝 둥글게 */
+            cursor: pointer;
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 이미지가 영역을 꽉 채우도록 설정 */
+            display: block;
+        }
+
+        /* 💡 핵심: 검게 변하면서 나타나는 오버레이 텍스트 영역 */
+        .news-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* 반투명한 검은색 배경 (0.6은 투명도) */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* 수직 중앙 정렬 */
+            align-items: center;     /* 수평 중앙 정렬 */
+            text-align: center;
+            padding: 20px;
+            
+            /* 평소에는 안 보이게 설정 */
+            opacity: 0; 
+            /* 0.3초 동안 부드럽게 나타나는 애니메이션 */
+            transition: opacity 0.3s ease-in-out; 
+        }
+
+        /* 마우스를 올렸을 때 오버레이가 보이도록 변경 */
+        .news-card:hover .news-overlay {
+            opacity: 1; 
+        }
+
+        .news-overlay h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .news-overlay p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* 페이지네이션 */
+         .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        .pagination a {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* 활성화된 페이지 */
+        .pagination a.active {
+            font-weight: bold;
+            color: #333;
+        }
+
+
+        /* 반응형 (모바일 화면) */
+        @media (max-width: 768px) {
+            .news-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+            .news-grid { grid-template-columns: 1fr; }
+        }
