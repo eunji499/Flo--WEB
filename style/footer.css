@@ -1,10 +1,10 @@
 
 /* 푸터 전체 컨테이너 설정 */
 .site-footer {
-  background-color: var(--pm-color-800); 
-  color: #ffffff;
-  padding: 3rem 0;
-}
+    background-color: var(--pm-color-800);
+    color: #ffffff;
+    padding: 3rem 0;
+    margin-top: 10rem;}
 
 .footer-inner {
   max-width: 1200px; 

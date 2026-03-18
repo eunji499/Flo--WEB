@@ -229,6 +229,15 @@
             background-color: #f0f0f0;
         }
 
+        .hover-bright {
+        filter: brightness(0.5);
+        transition: all 0.3s ease 0s;
+    }
+
+        .hover-bright:hover {
+            filter: brightness(1);
+        }
+
         .happenings-item strong{
             font-size: var(--fs-bd2);
             font-weight: var(--fw-bold);
@@ -282,14 +291,15 @@
 
 
 /* --- 제품 섹션 공통 스타일 --- */
-        .product-item {
-            width: 1440px;
-            display: flex;
-            align-items: center;
-            gap: 5rem;
-            margin-bottom: 6rem;
-            margin: 0 auto;
-        }
+    .product-item {
+        width: 1440px;
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+        margin-bottom: 6rem;
+        margin: 0 auto;
+        margin-top: 10rem;}
+*
 
  /* 두 번째 제품은 좌우 반전 */
         .product-item.reverse {
@@ -379,14 +389,14 @@
 
 
     /* 이미지 컨테이너 크기  */
-    .product-image-container {
-    width: 1500px; 
-    height: 1300px; 
-    
+   .product-image-container {
+    width: 1500px;
+    height: auto;
+    min-height: 800px;
     display: flex;
     justify-content: center;
-    align-items: center; 
-    }
+    align-items: center;
+}
 
     /* 노란색 별 모양 배경 */
     .yellow-star-bg {
@@ -435,48 +445,10 @@
 
 
 
-
-@media (max-width:1440px){
-    .hero-slider{
-        width: 100%;
-        height: auto;
-
-
-}
-.hover-bright {
-    filter: brightness(0.5);
-    transition: all 0.3s ease 0s;
-}
-
-.hover-bright:hover {
-    filter: brightness(1);
-}
-.circle {
-    width: 280px;
-    height: 280px;}
-
-.swiper-slide {
-    height: auto;
-}
-
-.story-image img {
-    width: 100%;
-}
-
- .story-image {
-   width: 680px;}
-
-
-.product-image-container {
-    width: 952px; 
-    height: 1300px; }
-
-
-    
-/* --- 태블릿 기기용 (1024px 이하) 반응형 스타일 --- */
+    /* --- 반응형 디자인 --- */
 @media (max-width: 1440px) {
     
-    /* 1. 컨테이너 고정 너비 해제 및 여백 설정 */
+    /* 컨테이너 고정 너비 해제 및 여백 설정 */
     .container2, 
     .product-item {
         width: 100%;
@@ -484,12 +456,12 @@
         box-sizing: border-box;
     }
 
-    /* 2. OUR STORY 섹션 조정 */
+    /* OUR STORY 섹션 조정 */
     .story-content {
         gap: 30px;
     }
     .story-image {
-        width: 50%; /* 이미지가 화면의 절반만 차지하도록 변경 */
+        width: 50%; 
         height: auto;
     }
     .story-image img {
@@ -500,11 +472,11 @@
         padding-top: 0;
     }
     .story-text h2 {
-        font-size: 2.5rem; /* 태블릿에 맞춰 폰트 크기 축소 */
+        font-size: 2.5rem; 
         padding-top: 0;
     }
 
-    /* 3. Circles 섹션 크기 축소 */
+    /* Circles 섹션 크기 축소 */
     .circles-section {
         gap: 15px;
         margin-bottom: 80px;
@@ -518,78 +490,88 @@
     .circle span { margin-bottom: 1rem; }
     .circle p { font-size: 0.8rem; }
 
-    /* 4. HAPPENINGS 섹션 세로 정렬 (Flex-direction 변경) */
+    /* HAPPENINGS 섹션 세로 정렬 */
     .happenings-grid {
-        flex-direction: column; /* 세로로 쌓이도록 변경 */
+        flex-direction: column; 
         align-items: center;
+        gap: 0;
     }
-    .happenings-grid img, 
+    .happenings-grid img{
+        width: 1240px; 
+        height: 700px;
+        object-fit: cover;
+        object-position: 50% 75%;
+    } 
     .happenings-text-box {
         width: 100%;
-        max-width: 600px; /* 너무 커지지 않도록 최대 너비 제한 */
-        height: auto;
+        max-width: 1200px; 
+        height: 400px;
+    
+    }
+    .happenings-item {
+    padding-bottom: 0;
     }
     .happenings-text-box {
         padding: 30px 20px;
     }
 
-    /* 5. 시그니처 메뉴 라인 바꿈 허용 */
+    /* 시그니처 메뉴 라인 바꿈 허용 */
     .nav-menu {
         gap: 2rem;
-        flex-wrap: wrap; /* 좁아지면 다음 줄로 넘어가도록 설정 */
+        flex-wrap: wrap; 
     }
     .nav-menu li {
         padding: 0 15px;
     }
 
-    /* 6. 상품 소개 섹션 너비 및 폰트 조정 */
+    /*상품 소개 섹션 너비 및 폰트 조정 */
     .product-item {
-        gap: 2rem; /* 이미지와 텍스트 사이 간격 축소 */
+        gap: 2rem; 
     }
     .product-title {
         font-size: 4rem;
         width: 100%;
     }
     .product-image-container {
-        width: 50%; /* 고정된 1500px 너비를 해제하고 절반만 차지하도록 변경 */
+        width: 50%; 
         height: auto;
-        min-height: 400px;
+        min-height: 800px;
     }
+
+    .product-item.reverse {margin-top: 10rem;}
 }
 
 
 
 
 
+/* --- 반응형 디자인 --- */
+@media (max-width: 768px) {
+    .circles-section {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .product-item.reverse {
+        margin-top: 5rem;
+        flex-direction: column;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .product-image-container {width: 80%;}
+    
+    .product-item {
+        gap: 2rem;
+        flex-direction: column;
+    }
+    .story-content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .story-text {
+        width: 100%;
+        text-align: center;
+    }
+    .story-image {
+        width: 100%;
+    }
 }
