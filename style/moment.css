@@ -1,39 +1,39 @@
        body {
-        padding-top: 120px;}
+        padding-top: 10rem;}
+
        .container {
-            max-width: 1000px;
+            max-width: 1360px;
             margin: 0 auto;
         }
 
         /* --- 상단 타이틀 및 탭 --- */
         .page-header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 4rem;
         }
 
         .page-title {
-            color: #4a80f6; /* 파란색 */
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 40px;
+            color:var(--pm-color-500);
+            font-size: var(--fs-h1);
+            font-weight: var(--fw-bold);
+            margin-bottom: 4rem;
         }
 
         .tab-menu {
             display: flex;
             justify-content: center;
-            gap: 40px;
+            gap: 2rem;
         }
 
         .tab-menu a {
             text-decoration: none;
-            font-size: 15px;
-            font-weight: 600;
-            color: #4a80f6; /* 기본 파란색 */
+            font-size: var(--fs--bd1);
+            font-weight: var(--fw-med);
+            color: var(--pm-color-500); 
         }
 
         .tab-menu a.active {
-            color: #f5a623; /* 활성화된 노란/주황색 */
-        }
+            color: var(--pi-color-400);}
 
         /* --- 섹션 헤더 (Visitor Reviews) --- */
         .section-header {
@@ -43,22 +43,24 @@
 
         .section-header h2 {
             color: #4a80f6;
-            font-size: 22px;
-            margin-bottom: 10px;
+            font-size: var(--fs-h1);
+            margin-bottom: 1rem;
         }
 
         .section-header p {
-            font-size: 14px;
-            font-weight: 500;
-            color: #222;
+            font-size: var(--fs--bd1);
+            font-weight: var(--fw-med);
+            color:#000;
+            margin-bottom: 9rem;
         }
 
         /* --- 메인 콘텐츠 (좌측 이미지, 우측 리뷰) --- */
         .content-grid {
             display: grid;
-            grid-template-columns: 1fr 1.1fr; /* 좌우 비율 설정 */
+            grid-template-columns: 1fr 1.1fr; 
             gap: 40px;
             margin-bottom: 60px;
+            align-items: end;
         }
 
         .main-image {
@@ -86,7 +88,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 1rem;
         }
 
         .pagination-mini {
@@ -131,8 +133,8 @@
         }
 
         .review-card {
-            background-color: #f8fafe; /* 아주 연한 파란 배경 */
-            padding: 30px;
+            background-color: #f8fafe; 
+            padding: 3rem;
             border-radius: 12px;
         }
 
@@ -169,33 +171,33 @@
         }
 
         /* --- 하단 갤러리 썸네일 --- */
-                /* --- 💡 하단 갤러리 가로 슬라이드 스타일 --- */
+          
         .gallery-wrapper {
             width: 100%;
-            overflow: hidden; /* 화면 밖으로 삐져나온 이미지를 숨김 */
+            overflow: hidden; 
             margin-bottom: 20px;
         }
 
         .gallery-track {
             display: flex;
             gap: 15px;
-            width: max-content; /* 내부 이미지 개수만큼 가로로 길게 늘어남 */
-            /* JS에서 부드럽게 따라오게 하려면 아래 속성은 빼는 것이 자연스럽습니다 */
+            width: max-content; 
+           
         }
 
         .gallery-item {
-            width: 230px; /* 각 썸네일의 고정 너비 (화면 크기에 따라 조절 가능) */
+            width: 359px; 
             aspect-ratio: 1 / 1;
             border-radius: 4px;
             overflow: hidden;
-            flex-shrink: 0; /* 컨테이너가 좁아져도 이미지가 찌그러지지 않게 방지 */
+            flex-shrink: 0; 
         }
 
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            pointer-events: none; /* 드래그 중 이미지가 선택되는 현상 방지 */
+            pointer-events: none; /
         }
 
         /* 프로그레스 바 마우스 커서 및 터치 설정 */
@@ -206,7 +208,7 @@
             border-radius: 2px;
             overflow: hidden;
             cursor: pointer;
-            touch-action: none; /* 💡 모바일에서 바를 터치할 때 화면이 스크롤되는 것 방지 */
+            touch-action: none; 
         }
 
         /* 프로그레스 바 */
@@ -219,18 +221,18 @@
         }
 
         .progress-bar {
-            width: 20%; /* 현재 진행 상태 */
+            width: 20%; 
             height: 100%;
-            background-color: #9bb7f9; /* 연한 파란색 */
+            background-color: #9bb7f9; 
             border-radius: 2px;
         }
 
-        /* 반응형 (모바일 사이즈 대응) */
+        /* 반응형 (모바일 사이즈) */
         @media (max-width: 768px) {
             .content-grid {
-                grid-template-columns: 1fr; /* 세로로 배치 */
+                grid-template-columns: 1fr; 
             }
             .gallery-grid {
-                grid-template-columns: repeat(2, 1fr); /* 2열로 변경 */
+                grid-template-columns: repeat(2, 1fr); 
             }
         }
