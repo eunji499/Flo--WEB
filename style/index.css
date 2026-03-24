@@ -87,7 +87,7 @@
 
         .story-text p {
             font-size: 0.9rem;
-            margin-bottom: 15px;
+            margin-bottom: 1rem;
             word-break: keep-all;
         }
 
@@ -314,10 +314,19 @@
             flex: 1;
             position: relative;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             min-height: 500px;
+            gap: 0.6rem; 
         }
+        .product-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;}
+        .product-image-container .overlay-svg {
+            width: 60px;}
+
+
  /* --- 제품 텍스트 상세 스타일 --- */
         .product-title {
             color: #3B6BDB;
@@ -406,14 +415,41 @@
     background-size: contain;     
     }
 
-    .product-image-container img {
-    width: 60%; 
-    height: auto;  
-    filter: drop-shadow(5px 10px 15px rgba(0,0,0,0.1)); 
+    .product-image-container span img {
+        width: 60px;
+        cursor: pointer;
+        transition: transform 0.25s ease;
     }
 
-    .product-image-container img:hover {
+    .product-image-container span img:hover,
+    .product-image-container span img.jump-up {
+        animation: jump-up 0.8s ease-out;
+    }
+
+    .product-image-container img {
+        width: 60%; 
+        height: auto;  
+        filter: drop-shadow(5px 10px 15px rgba(0,0,0,0.1)); 
+    }
+
+    .product-image-container img:not(span img):hover,
+    .product-image-container img.shake {
         animation: shake 1s ease-in-out infinite;
+    }
+
+    @keyframes jump-up {
+        0% { transform: translateY(0) scale(1); }
+        30% { transform: translateY(-10px) scale(1.03); }
+        60% { transform: translateY(-18px) scale(1.06); }
+        100% { transform: translateY(0) scale(1); }
+    }
+
+    @keyframes shake {
+        0% { transform: translateX(0) rotate(0deg); }
+        25% { transform: translateX(-20px) rotate(-5deg); }
+        50% { transform: translateX(20px) rotate(5deg); }
+        75% { transform: translateX(-20px) rotate(-5deg); }
+        100% { transform: translateX(0) rotate(0deg); }
     }
 
 

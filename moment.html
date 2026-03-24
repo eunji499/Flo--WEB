@@ -13,6 +13,8 @@
     
     <script src="./script/moment.js"></script>
     <script src="./script/header.js"></script>
+    <script src="./script/list.js"></script>
+
     <link rel="stylesheet" href="./style/moment.css">
 </head>
 <body>
@@ -185,10 +187,10 @@
     <!-- 상단 헤더 및 탭 -->
     <div class="page-header">
         <h1 class="page-title">Moments</h1>
-        <div class="tab-menu">
-            <a href="#">( 사진첩 )</a>
-            <a href="#" class="active">( 방문자 리뷰 )</a>
-        </div>
+        <nav class="tab-menu">
+            <li><a href="#">( 사진첩 )</a></li>
+            <li><a href="#" class="active">( 방문자 리뷰 )</a></li>
+        </nav>
     </div>
 
     <!-- 섹션 타이틀 -->
@@ -216,7 +218,13 @@
                     <span>4</span>
                     <span>5</span>
                 </div>
-                <button class="sort-btn">최신순 <span>∨</span></button>
+                <div class="sort-dropdown">
+                    <button type="button" class="sort-trigger">최신순 <span><img src="./img/solar_alt-arrow-down-outline.svg" alt="최신순"></span></button>
+                    <ul class="sort-options">
+                        <li data-sort="latest">최신순</li>
+                        <li data-sort="oldest">오래된 순</li>
+                    </ul>
+                </div>
             </div>
 
             <!-- 리뷰 리스트 -->
@@ -224,7 +232,7 @@
                 <!-- 리뷰 카드 1 -->
                 <div class="review-card">
                     <div class="reviewer-info">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&auto=format&fit=crop" alt="프로필" class="reviewer-avatar">
+                        <img src="./img/Ellipse 5.jpg" alt="프로필" class="reviewer-avatar">
                         <div class="reviewer-details">
                             <h4>김*연</h4>
                             <span>24세</span>
@@ -242,7 +250,7 @@
                 <!-- 리뷰 카드 2 -->
                 <div class="review-card">
                     <div class="reviewer-info">
-                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=150&auto=format&fit=crop" alt="프로필" class="reviewer-avatar">
+                        <img src="./img/Ellipse 6.jpg" alt="프로필" class="reviewer-avatar">
                         <div class="reviewer-details">
                             <h4>이*진</h4>
                             <span>26세</span>

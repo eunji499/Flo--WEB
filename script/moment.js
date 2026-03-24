@@ -1,4 +1,6 @@
 window.addEventListener('load', () => {
+    
+    
     const progressContainer = document.querySelector('.progress-container');
     const progressBar = document.querySelector('.progress-bar');
     const galleryWrapper = document.querySelector('.gallery-wrapper');
@@ -10,6 +12,49 @@ window.addEventListener('load', () => {
     let autoSlideInterval;
     let currentPercentage = 0;
     const slideSpeed = 0.001; // 자동 슬라이드 속도 (더 느리게 조정)
+
+    // -- 정렬 드롭다운 2뎁스 --
+    const sortDropdown = document.querySelector('.sort-dropdown');
+    const sortTrigger = sortDropdown?.querySelector('.sort-trigger');
+    const sortOptions = sortDropdown?.querySelectorAll('.sort-options li');
+
+    function closeSortDropdown() {
+        sortDropdown?.classList.remove('open');
+    }
+
+    function setSortSelected(label) {
+        if (!sortTrigger) return;
+        sortTrigger.textContent = `${label} `;
+        const iconSpan = document.createElement('span');
+        iconSpan.innerHTML = '<img src="./img/solar_alt-arrow-down-outline.svg" alt="">';
+        sortTrigger.appendChild(iconSpan);
+    }
+
+    if (sortTrigger) {
+        sortTrigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            sortDropdown.classList.toggle('open');
+        });
+    }
+
+    sortOptions?.forEach(option => {
+        option.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const selected = option.dataset.sort;
+            setSortSelected(option.textContent.trim());
+
+            sortOptions.forEach(item => item.classList.remove('active'));
+            option.classList.add('active');
+
+            closeSortDropdown();
+
+            // 여기서 실제 정렬 로직을 넣어주세요.
+            // (예: review-list 내부 review-card 정렬 적용)
+            console.log('정렬 옵션 선택:', selected);
+        });
+    });
+
+    document.addEventListener('click', closeSortDropdown);
 
     // 마우스와 터치 이벤트에서 공통으로 X 좌표를 가져오는 함수
     function getClientX(e) {

@@ -26,5 +26,29 @@ btnMores.forEach((span)=>{
     })
 })
 
+// 제품 이미지에 '위로 튀는' 애니메이션(뷰포트 진입 시)
+const productSpanImgs = document.querySelectorAll('.product-image-container span img');
+if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.classList.add('jump-up');
+                img.addEventListener('animationend', () => {
+                    img.classList.remove('jump-up');
+                }, { once: true });
+            }
+        });
+    }, { threshold: 0.4 });
 
-})
+    productSpanImgs.forEach(img => observer.observe(img));
+} else {
+    productSpanImgs.forEach(img => {
+        img.addEventListener('mouseenter', () => {
+            img.classList.add('jump-up');
+            img.addEventListener('animationend', () => img.classList.remove('jump-up'), { once: true });
+        });
+    });
+}
+
+});
