@@ -11,12 +11,14 @@
         top: 0;
         z-index: 1000;
         width: 100%;
+        opacity: 0;
+        
 
     }
     header:hover{
         max-height: 400px;
     }
-
+    header.on{opacity: 1;}
     header .common-frame{
         display: flex;
         justify-content: space-between;
@@ -62,6 +64,11 @@
     }
 
 .smart-header{display: none;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+}
+.smart-header.on{
+    opacity: 1;
 }
 .menu-smart-hidden{display: none;}
 .btn-close img{
@@ -258,4 +265,8 @@
     .sns img{
         height: 1.5rem;
 }
+}
+
+@media (max-width:500px){
+    
 }

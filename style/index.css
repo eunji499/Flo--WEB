@@ -1,3 +1,6 @@
+html{
+        font-size: var(--basic-font-pc);
+    }
 .hero-slider{
     width: 100%;
     height:calc(100vh - 100px) ;
@@ -421,10 +424,10 @@
         transition: transform 0.25s ease;
     }
 
-    .product-image-container span img:hover,
+    /* .product-image-container span img:hover,
     .product-image-container span img.jump-up {
         animation: jump-up 0.8s ease-out;
-    }
+    } */
 
     .product-image-container img {
         width: 60%; 
@@ -432,25 +435,21 @@
         filter: drop-shadow(5px 10px 15px rgba(0,0,0,0.1)); 
     }
 
+    .product-image-container img:not(span img),
+    .product-image-container img.shake {
+        animation: shake 3s ease-in-out infinite;
+    }
     .product-image-container img:not(span img):hover,
     .product-image-container img.shake {
         animation: shake 1s ease-in-out infinite;
     }
 
-    @keyframes jump-up {
+    /* @keyframes jump-up {
         0% { transform: translateY(0) scale(1); }
         30% { transform: translateY(-10px) scale(1.03); }
         60% { transform: translateY(-18px) scale(1.06); }
         100% { transform: translateY(0) scale(1); }
-    }
-
-    @keyframes shake {
-        0% { transform: translateX(0) rotate(0deg); }
-        25% { transform: translateX(-20px) rotate(-5deg); }
-        50% { transform: translateX(20px) rotate(5deg); }
-        75% { transform: translateX(-20px) rotate(-5deg); }
-        100% { transform: translateX(0) rotate(0deg); }
-    }
+    } */
 
 
     /* 노란색 별 모양 배경 */
@@ -483,7 +482,16 @@
 
     /* --- 반응형 디자인 --- */
 @media (max-width: 1440px) {
-    
+        html{
+        font-size: var(--basic-font-tab);}
+    .footer-middle {
+        display: none;}
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;}
+    .company-info {
+        margin-bottom: 2rem;}
+
     /* 컨테이너 고정 너비 해제 및 여백 설정 */
     .container2, 
     .product-item {
@@ -491,6 +499,7 @@
         padding: 0 20px;
         box-sizing: border-box;
     }
+    
 
     /* OUR STORY 섹션 조정 */
     .story-content {
@@ -533,8 +542,7 @@
         gap: 0;
     }
     .happenings-grid img{
-        width: 1240px; 
-        height: 700px;
+        width: 800px; 
         object-fit: cover;
         object-position: 50% 75%;
     } 
@@ -548,9 +556,16 @@
     padding-bottom: 0;
     }
     .happenings-text-box {
+        box-sizing: border-box;
+        width: 800px;
         padding: 30px 20px;
     }
-
+    .happenings-section p {
+        margin-bottom: 0;
+}
+#gap{
+    margin-bottom: 1rem;
+}
     /* 시그니처 메뉴 라인 바꿈 허용 */
     .nav-menu {
         gap: 2rem;
@@ -575,14 +590,22 @@
     }
 
     .product-item.reverse {margin-top: 10rem;}
+     .product-image-container img:not(span img),
+    .product-image-container img.shake {
+        animation: shake 3s ease-in-out infinite;
+    }
 }
 
 
 
 
 
-/* --- 반응형 디자인 --- */
+/* --- 반응형 디자인(mo) --- */
+
 @media (max-width: 768px) {
+    html{
+        font-size: var(--basic-font-mo);
+    }
     .circles-section {
         flex-direction: column;
         align-items: center;
@@ -593,7 +616,7 @@
         flex-direction: column;
     }
 
-    .product-image-container {width: 80%;}
+    .product-image-container {width: 100%;}
     
     .product-item {
         gap: 2rem;
@@ -610,4 +633,20 @@
     .story-image {
         width: 100%;
     }
+     .company-info {
+        width: 400px;
+        margin-bottom: 2rem;}
+    .footer-middle {
+        display: none;}
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;}
+
+
+    .happenings-grid img {
+            width: 400px;
+            height: 400px;}
+    .happenings-text-box {
+        width: 400px;}
+        
 }

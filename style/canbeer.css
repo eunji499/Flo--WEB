@@ -225,6 +225,9 @@
         }
 
         /* 반응형 설정 (모바일) */
+        @media (max-width: 1440px) {
+            
+    }
         @media (max-width: 768px) {
             .beer-grid, .md-grid {
                 grid-template-columns: repeat(2, 1fr); /* 2열로 변경 */

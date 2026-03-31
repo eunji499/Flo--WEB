@@ -51,4 +51,26 @@ if ('IntersectionObserver' in window) {
     });
 }
 
+    //헤더 스크롤시 사라졌다가 나타나기
+    const header = document.querySelector("header")
+    const smart = document.querySelector(".smart-header")
+
+    let lastScrollTop = 0;
+    window.addEventListener('scroll',()=>{
+        //스크롤 바가 움직일 떄 실행될 소스코드
+        const scrollTop = window.pageXOffset || document.documentElement.scrollTop; //호환성을 위해서 만들어 놓은 소스코드
+        
+        if(scrollTop < lastScrollTop){
+             header.classList.add("on")
+             smart.classList.add("on")
+            
+        }
+        else{
+            header.classList.remove("on")
+            smart.classList.remove("on")
+            
+        }
+        lastScrollTop = scrollTop 
+    })
+
 });
