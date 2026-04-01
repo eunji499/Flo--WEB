@@ -3,8 +3,7 @@ html{
     }
 .hero-slider{
     width: 100%;
-    height:calc(100vh - 100px) ;
-  
+    height: auto !important; 
 }
 
 .hero-slider .swiper-slide img{
@@ -12,6 +11,12 @@ html{
     height: 100%;
     object-fit: cover;
     margin-bottom: 10rem;
+}
+
+.swiper-backface-hidden .swiper-slide {
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    height: auto;
 }
 
 .hero-slider.swiper .pagination{
@@ -146,7 +151,7 @@ html{
         .happenings-section {
             background-color: var(--pm-color-500);
             color: white;
-            padding: 80px 0;
+            padding: 1rem 0;
             text-align: center;
         }
 
@@ -226,6 +231,7 @@ html{
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
+            margin-bottom: 2rem;
         }
 
         .join-btn:hover {
@@ -310,6 +316,7 @@ html{
         }
 
         .product-text {
+            margin-bottom: 5rem;
             flex: 1;
         }
 
@@ -482,15 +489,10 @@ html{
 
     /* --- 반응형 디자인 --- */
 @media (max-width: 1440px) {
-        html{
+    html{
         font-size: var(--basic-font-tab);}
-    .footer-middle {
-        display: none;}
-    .footer-bottom {
-        flex-direction: column;
-        align-items: center;}
-    .company-info {
-        margin-bottom: 2rem;}
+    
+    
 
     /* 컨테이너 고정 너비 해제 및 여백 설정 */
     .container2, 
@@ -517,7 +519,7 @@ html{
         padding-top: 0;
     }
     .story-text h2 {
-        font-size: 2.5rem; 
+        font-size: 1.5rem; 
         padding-top: 0;
     }
 
@@ -564,7 +566,7 @@ html{
         margin-bottom: 0;
 }
 #gap{
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
 }
     /* 시그니처 메뉴 라인 바꿈 허용 */
     .nav-menu {
@@ -602,7 +604,7 @@ html{
 
 /* --- 반응형 디자인(mo) --- */
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     html{
         font-size: var(--basic-font-mo);
     }
@@ -633,20 +635,14 @@ html{
     .story-image {
         width: 100%;
     }
-     .company-info {
-        width: 400px;
-        margin-bottom: 2rem;}
-    .footer-middle {
-        display: none;}
-    .footer-bottom {
-        flex-direction: column;
-        align-items: center;}
+     
+   
 
 
     .happenings-grid img {
-            width: 400px;
+            width: 335px;
             height: 400px;}
     .happenings-text-box {
-        width: 400px;}
+        width: 335px;}
         
 }
