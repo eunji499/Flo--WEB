@@ -2,7 +2,7 @@
         font-size: var(--basic-font-pc);
     }
        body {
-        padding-top: 120px;}
+        padding-top: 7rem;}
        /* 공통 스타일 */
         .container {
             width: 100%;
@@ -32,7 +32,7 @@
         .section-subtitle {
             text-align: center;
             font-size: var(--fs--bd1);
-            font-weight: var(--fw-med);
+            font-weight: var(--fw-reg);
             color: #000;
             margin-bottom: 6rem;
         }
@@ -90,6 +90,7 @@
         /* MD 상품 그리드 (3x1) */
         .md-grid {
             grid-template-columns: repeat(3, 1fr);
+            margin-bottom: 5rem;
         }
 
         /* 상품 카드 스타일 */
@@ -232,19 +233,16 @@
                 max-width: 1000px;} */
                 .product-grid {
                 justify-content: center;}
-            .footer-middle {
-                display: none;}
-            .footer-bottom {
-                flex-direction: column;
-                align-items: center;}
-            .company-info {
-                margin-bottom: 2rem;}
+
             .badge-best {
                 top: 0.8rem;
                 right: 0.8rem;
                 font-size: var(--fs--h1);
                 font-weight: var(--fw-bold);
                 padding: 5px 10px;}
+            .md-grid {
+                grid-template-columns: repeat(3, 0.1fr);
+                margin-bottom: 5rem;}
     
     
         }
@@ -255,7 +253,8 @@
                 margin: 0 auto;
             }
             .product-grid {
-                justify-content: center;}
+                justify-content: center;
+            margin-bottom: 5rem;}
 
     }
 
@@ -267,20 +266,24 @@
                 height: 250px;}
             .product-details .description2 {
                 width: 200px;}
-            .company-info {
-                width: 400px;
-                margin-bottom: 2rem;}
-            .footer-middle {
-                display: none;}
-            .footer-bottom {
-                flex-direction: column;
-                align-items: center;}
+            
             .badge-best {
                 top: 0.5rem;
                 right: 0.5rem;
                 font-size: var(--fs--bd1);
                 font-weight: var(--fw-bold);
                 padding: 5px 10px;}
+            .menu-tabs {
+                flex-direction: column;}
     }
 
+     @media (max-width: 480px) {
+            .beer-grid, .md-grid {
+                grid-template-columns: 0.1fr; /* 1열로 변경 */
+            }
+            .container {
+            width: 100%;
+            max-width: 138px;}
         
+        
+        }

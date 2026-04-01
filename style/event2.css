@@ -1,7 +1,7 @@
 
 
   body {
-        padding-top: 10rem;}
+        padding-top: 7rem;}
  .container {
             max-width: 1360px;
             margin: 0 auto;
@@ -132,10 +132,28 @@
         }
 
 
-        /* 반응형 (모바일 화면) */
+        /* 반응형 (모바일 화면) */ 
+        @media (max-width: 1440px) {
+            html{
+                font-size: var(--basic-font-tab);
+            }
+             .container {
+            max-width: 1000px;}
+        }
+        @media (max-width: 1000px) {
+            .container {
+                 max-width: 800px;}
+        }
         @media (max-width: 768px) {
+            html{
+                font-size: var(--basic-font-mo);
+            }
+            .container {
+                max-width: 500px;}
             .news-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 480px) {
             .news-grid { grid-template-columns: 1fr; }
+            .container {
+                max-width: 300px;}
         }
