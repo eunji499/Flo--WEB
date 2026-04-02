@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./style/header.css">
     <link rel="stylesheet" href="./style/footer.css">
     <link rel="stylesheet" href="./headercommon.html">
+    <link rel="stylesheet" href="./style/reservation.css">
 
     <script src="./script/header.js"></script>
 </head>
@@ -100,7 +101,7 @@
                 </ul>
         </div>
     </div>
-    <header>
+    <header class="on">
         <div class="common-frame">
             <div class="logo">
                 <a href="./index.html">
@@ -168,7 +169,7 @@
 
 
     <!-- 스마트 기기용 해더 -->
-    <div class="smart-header">
+    <div class="smart-header on">
         <div class="common-frame">
             <div class="logo">
                 <a href="./index.html"><img src="./img/flo-logo.svg" alt="상단로고"></a>
@@ -180,6 +181,104 @@
 
     <!-- 전체 컨텐츠 -->
 <main>
+
+<section class="reservation-section">
+  <div class="res-header">
+    <h2 class="res-title">Reservation</h2>
+    <div class="tab-group">
+      <span class="tab-item highlight">( 원데이 클래스 )</span>
+      <span class="tab-item">( 대관 문의 )</span>
+    </div>
+    <div class="class-info">
+      <h3 class="class-title">One-day class</h3>
+      <p class="class-subtext">Flo와 함께하는 원데이 클래스.</p>
+    </div>
+  </div>
+
+ <div class="res-main">
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.91572979261!2d126.974635!3d37.562791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2f32779835d%3A0x6735e23654452174!2z7ZWc6rWt7J2A7ZaJIO2ZlO2PkOuyleusvOq_hw!5e0!3m2!1sko!2skr!4v1711111111111!5m2!1sko!2skr" 
+      width="100%" 
+      height="100%" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+
+    <div class="form-container">
+      <form class="booking-form">
+        <div class="input-row">
+          <label>이름</label>
+          <input type="text">
+        </div>
+        <div class="input-row">
+          <label>전화번호</label>
+          <input type="tel">
+        </div>
+        <div class="input-row">
+          <label>인원</label>
+          <input type="number">
+        </div>
+        <div class="input-row">
+          <label>날짜</label>
+          <input type="date">
+        </div>
+        <div class="input-row">
+          <label>시간</label>
+          <input type="time">
+        </div>
+        <button type="submit" class="submit-btn">예약하기</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- <div class="notice-section">
+    <h4 class="notice-title">[안전하고 즐거운 클래스를 위한 약속]</h4>
+    <div class="notice-list">
+      <div class="notice-item">
+        <span class="label">시간 엄수</span>
+        <p>클래스는 정시에 시작됩니다. 15분 이상 지각 시 다른 참여자의 몰입을 위해 입장이 제한될 수 있으며, 이는 당일 취소로 간주됩니다.</p>
+      </div>
+      <div class="notice-item">
+        <span class="label">예약 변경</span>
+        <p>일정 변경 및 환불은 수업 3일 전까지만 가능합니다. 재료 준비가 시작된 이후에는 취소가 어려우니 신중한 예약 부탁드립니다.</p>
+      </div>
+      <div class="notice-item">
+        <span class="label">기록 공유</span>
+        <p>클래스 중 촬영된 사진은 마케팅 용도로 사용될 수 있습니다. 원치 않으실 경우 작가에게 미리 말씀해 주세요.</p>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="reservation-container">
+  </section>
+
+<footer class="notice-full-width">
+  <div class="notice-inner">
+     <h4 class="notice-title">[안전하고 즐거운 클래스를 위한 약속]</h4>
+     <div class="notice-list">
+        <div class="notice-item">
+        <span class="label">시간 엄수</span>
+        <p>클래스는 정시에 시작됩니다. 15분 이상 지각 시 다른 참여자의 몰입을 위해 입장이 제한될 수 있으며, 이는 당일 취소로 간주됩니다.</p>
+      </div>
+      <div class="notice-item">
+        <span class="label">예약 변경</span>
+        <p>일정 변경 및 환불은 수업 3일 전까지만 가능합니다. 재료 준비가 시작된 이후에는 취소가 어려우니 신중한 예약 부탁드립니다.</p>
+      </div>
+      <div class="notice-item">
+        <span class="label">기록 공유</span>
+        <p>클래스 중 촬영된 사진은 마케팅 용도로 사용될 수 있습니다. 원치 않으실 경우 작가에게 미리 말씀해 주세요.</p>
+      </div>
+        </div>
+  </div>
+</footer>
+
+
 
 </main>
  <!-- 푸터영역 -->
