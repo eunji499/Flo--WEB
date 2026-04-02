@@ -46,8 +46,8 @@
         display: flex;
         flex-direction: column;
         gap: .5rem;
-        font-size: var(--fs-bd2);
-        font-weight: var(--fw-med);
+        /* font-size: var(--fs-bd2);
+        font-weight: var(--fw-reg); */
     }
     .gnb ul a:hover{
         color: var(--pi-color-400);

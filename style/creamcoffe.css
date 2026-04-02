@@ -100,10 +100,8 @@
         }
 
         .product-card .image-wrapper {
-            width: 400px;
-            height: 500px;
             position: relative;
-            margin-bottom: 0.8rem;
+            margin-bottom: 15px;
             overflow: hidden;
             background-color: #f9f9f9; 
         }

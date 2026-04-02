@@ -145,14 +145,14 @@
             position: absolute;
             top: 1rem;
             right: 1rem;
-            z-index: 10; /* 이미지 위로 올라오도록 설정 */
+            z-index: 10;
             background-color: var(--pm-color-500);
             color: #fff;
-            font-size: var(--fs-h3);
+            font-size: var(--fs-h4);
             font-weight: var(--fw-bold);
-            padding: 10px 20px;
+            padding: 5px 10px;
             border-radius: 50px;
-        }
+}
 
         /* 상품 상세 정보 */
         .product-details {
@@ -280,6 +280,7 @@
         @media (max-width: 480px) {
             .beer-grid, .md-grid {
                 grid-template-columns: 0.1fr; /* 1열로 변경 */
+                
             }
             .container {
             width: 100%;
