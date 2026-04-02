@@ -31,7 +31,7 @@
         .section-subtitle {
             text-align: center;
             font-size: var(--fs--bd1);
-            font-weight: var(--fw-med);
+            font-weight: var(--fw-reg);
             color: #000;
             margin-bottom: 6rem;
         }
@@ -281,4 +281,7 @@
             .beer-grid, .md-grid {
                 grid-template-columns: 0.1fr; /* 1열로 변경 */
             }
+            .container {
+            width: 100%;
+            max-width: 170px;}
         }

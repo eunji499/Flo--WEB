@@ -31,7 +31,7 @@
         .section-subtitle {
             text-align: center;
             font-size: var(--fs--bd1);
-            font-weight: var(--fw-med);
+            font-weight: var(--fw-reg);
             color: #000;
             margin-bottom: 6rem;
         }
@@ -55,6 +55,7 @@
             justify-content: center;
             gap: 2rem;
             padding-bottom: 4rem;
+            white-space: nowrap;
         }
 
         .menu-tabs a {
@@ -78,7 +79,7 @@
         /* 그리드 시스템 */
         .product-grid {
             display: grid;
-            gap: 4rem;
+            gap: 2rem;
         }
 
         /* Canned Beer 그리드 (3x2) */
@@ -89,6 +90,7 @@
         /* MD 상품 그리드 (3x1) */
         .md-grid {
             grid-template-columns: repeat(3, 1fr);
+            margin-bottom: 5rem;
         }
 
         /* 상품 카드 스타일 */
@@ -225,17 +227,75 @@
         }
 
         /* 반응형 설정 (모바일) */
-        @media (max-width: 1440px) {
+        @media (max-width: 1440px){
+            html{
+                font-size: var(--basic-font-tab);}
+            .beer-grid {
+                grid-template-columns: repeat(3, 0.1fr);}
+            .product-card .image-wrapper {
+                 width: 300px;
+                 height: 375px;}
+       
+            .product-details .description2 {
+                width: 300px;}
+            /* .container {
+                max-width: 1000px;} */
+                .product-grid {
+                justify-content: center;}
+
+            .badge-best {
+                top: 0.8rem;
+                right: 0.8rem;
+                font-size: var(--fs--h1);
+                font-weight: var(--fw-bold);
+                padding: 5px 10px;}
             
-    }
-        @media (max-width: 768px) {
-            .beer-grid, .md-grid {
-                grid-template-columns: repeat(2, 1fr); /* 2열로 변경 */
+            .md-grid {
+            grid-template-columns: repeat(3, 0.1fr);
             }
-        }
+            .image-hover-wrapper img {height: 95%;}
+            }
+
+        @media (max-width: 1060px) {
+            .beer-grid, .md-grid {
+                grid-template-columns: repeat(2, 0.1fr); /* 2열로 변경 */
+                margin: 0 auto;
+            }
+            .product-grid {
+                justify-content: center;}
+
+    }
+
+        @media (max-width: 768px) {
+            html{
+                font-size: var(--basic-font-mo);}
+            .beer-grid, .md-grid {
+                grid-template-columns: repeat(2, 0.1fr);} /* 2열로 변경 */
+            .menu-tabs {
+                flex-direction: column;}
+            
+           .product-card .image-wrapper {
+                width: 200px;
+                height: 250px;}
+            .product-details .description2 {
+                width: 200px;}
+            
+            .badge-best {
+                top: 0.5rem;
+                right: 0.5rem;
+                font-size: var(--fs--bd1);
+                font-weight: var(--fw-bold);
+                padding: 5px 10px;}
+            }
+            
+
+        
 
         @media (max-width: 480px) {
             .beer-grid, .md-grid {
-                grid-template-columns: 1fr; /* 1열로 변경 */
+                grid-template-columns: 0.1fr; /* 1열로 변경 */
             }
+            .container {
+            width: 100%;
+            max-width: 170px;}
         }
