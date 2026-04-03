@@ -1,7 +1,7 @@
 
 
   body {
-        padding-top: 7rem;}
+        padding-top: 5rem;}
  .container {
             max-width: 1360px;
             margin: 0 auto;
@@ -11,13 +11,13 @@
         /* 상단 헤더 및 탭 메뉴 */
         .event-header {
             text-align: center;
-            margin-bottom: 5rem;
+            margin-bottom: 4rem;
         }
         .event-header h1 {
             color: var(--pm-color-500);
-            font-size: var(--fs-h1);
+            /* font-size: 1.4rem; */
             font-weight: var(--fw-bold);
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
         }
         .tab-menu {
             display: flex;
@@ -25,7 +25,7 @@
             gap: 2rem;
         }
         .tab-menu a {
-            font-size: var(--fs--bd1);
+            font-size: 0.8rem;
             font-weight: var(--fw-med);
             color:var(--pm-color-900);
         }
@@ -36,17 +36,17 @@
         /* 뉴스 섹션 타이틀 */
         .news-title-area {
             text-align: center;
-            margin-bottom: 6rem;
+            margin-bottom: 4rem;
         }
         .news-title-area h2 {
             color:var(--pm-color-500);
-            font-size: var(--fs-h1);
+            font-size: 1.4rem;
             margin-bottom: 1rem;
         }
         .news-title-area p {
             font-size: var(--fs--bd1);
             color:#000;
-            font-weight: var(--fw-med);
+            font-weight: var(--fw-reg);
         }
 
         /* 3열 그리드 레이아웃 */

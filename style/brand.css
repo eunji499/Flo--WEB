@@ -18,8 +18,9 @@
 
 /* 상단 텍스트 스타일 */
 .content-top {
-  padding: 80px 10%;
-  margin-bottom: 400px;
+    width: 1360px;
+    margin: 0 auto;
+    margin-bottom: 400px;
 }
 
 .main-title { 
@@ -32,33 +33,33 @@
 }
 
 .avoid-list {
-  margin-top: 870px;
+  margin-top: 900px;
   
 }
 .md-title{
     text-align: center;
     margin-bottom: 40px;
 }
-.avoid-list h3 {  padding-bottom: 10px; }
+.avoid-list h3 { padding-bottom: 10px; }
 .avoid-list li { list-style: none; margin-top: 20px; font-size: 0.9rem; }
 
 .sub-description {
     position: absolute;
-    left: 1535px;
+    left: 110vh;
     margin-top: 316px;
 }
 
 /* 4. 대각선 연결선 구현  */
 .connector-line.line-1 {
-  position: absolute;
-  top: 14%;
-  left: 43%;
+    position: absolute;
+    top: 12%;
+    left: 35%;
 }
 
 .connector-line.line-2 {
-  position: absolute;
-  top: 24%;
-  left: 25%;
+    position: absolute;
+    top: 23%;
+    left: 20%;
 }
 
 /* 숨겨진 상태 */
@@ -79,7 +80,9 @@
 .line-1.reveal { transition-delay: 0.3s; }
 .sub-description.reveal { transition-delay: 0.5s; }
 .line-2.reveal { transition-delay: 0.6s; }
-.avoid-list.reveal { transition-delay: 0.8s; }
+.avoid-list.reveal { 
+  transition-delay: 0.8s; 
+  }
 
 
 
@@ -96,7 +99,7 @@
 }
 
 .img-can {
-  width: 450px;
+  width: 350px;
   margin-right: 20px;
   transform: rotate(-10deg) translateX(20px);
   z-index: 2;
@@ -104,7 +107,7 @@
 }
 
 .img-cup {
-  width: 550px;
+  width: 450px;
   transform: rotate(10deg) translateX(20px);
   margin-top: 400px;
   animation: floating-slow 6s ease-in-out infinite;
@@ -263,3 +266,46 @@
 
 .connector.left::after { left: -5px; }
 .connector2.right::after { right: -5px; }
+
+
+
+
+
+
+
+
+/* 반응형 모바일 */
+@media (max-width: 1440px){
+  html{font-size: var(--basic-font-tab);}
+  .content-top {
+      width: 1000px;}
+  .sub-description {
+    left: 83vh;}
+  .reveal {
+    width: 50%;}
+  .avoid-list {
+    margin-top: 800px;}
+  .main-title.reveal {
+    width: 100%;
+}
+}
+
+@media (max-width: 1000px){
+  html{font-size: var(--basic-font-tab);}
+  .content-top {
+      width: 800px;}
+  .avoid-list {
+    margin-top: 750px;
+}
+}
+
+@media (max-width: 768px){
+  html{font-size: var(--basic-font-mo);}
+  .content-top {
+      width: 500px;}
+}
+
+@media (max-width: 500px){
+  .content-top {
+      width: 300px;}
+}
