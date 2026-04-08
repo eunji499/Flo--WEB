@@ -1,0 +1,268 @@
+/* === 기존 스타일 === */
+/* === 1. 공통 및 배경 스타일 === */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #eef5f6; display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            min-height: 100vh; font-family: 'SUIT', 'Montserrat', sans-serif;
+        }
+
+        /* === 2. 메인 페이지 요소 === */
+        .welcome-title {
+            color: #cc3a3a; font-family: 'Great Vibes', cursive;
+            font-size: 7.5rem; font-weight: 400; margin-bottom: 4rem;
+        }
+        .envelope-area {
+            position: relative; margin-bottom: 5rem;
+            display: flex; justify-content: center; align-items: center;
+        }
+        .envelope-image { width: 320px; height: auto; filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.03)); }
+        .key-icon { position: absolute; bottom: -15px; right: -25px; width: 75px; height: auto; transform: rotate(20deg); }
+        .button-container { display: flex; gap: 2.5rem; }
+
+        /* 버튼 스타일 */
+        .welcome-btn {
+            appearance: none; -webkit-appearance: none; -moz-appearance: none;
+            outline: none; box-shadow: none; background: none; margin: 0;
+            background-color: #ffffff; border: 1px solid #cccccc; border-radius: 8px;
+            padding: 1rem 4rem; color: #333333; font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem; font-weight: 600; letter-spacing: 0.5px;
+            cursor: pointer; transition: all 0.3s ease;
+        }
+        .welcome-btn:hover { background-color: #cc3a3a; border-color: #cc3a3a; color: #ffffff; }
+
+        /* === 3. 모달(팝업) 공통 스타일 === */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex; justify-content: center; align-items: center;
+            opacity: 0; visibility: hidden; transition: all 0.4s ease; z-index: 1000;
+        }
+        .modal-box {
+            background-color: #ffffff; width: 1000px; max-width: 95%; /* 모달을 살짝 더 넓게 */
+            padding: 3rem 4rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: translateY(50px); transition: transform 0.4s ease, opacity 0.4s ease;
+            max-height: 90vh; overflow-y: auto; /* 내용이 길면 스크롤 가능하게 */
+        }
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal-overlay.active .modal-box { transform: translateY(0); }
+
+        /* 모달 헤더 (타이틀 & 닫기 버튼) */
+        .modal-header {
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid #cc3a3a; padding-bottom: 0.5rem; margin-bottom: 2.5rem;
+        }
+        .modal-title { color: #cc3a3a; font-family: 'Great Vibes', cursive; font-size: 3.5rem; font-weight: 400; }
+        .close-btn { background: none; border: none; font-size: 2rem; color: #cc3a3a; cursor: pointer; font-weight: bold; line-height: 1; }
+
+        /* === 4. 첫 번째 모달 (Concept) 전용 스타일 === */
+        .concept-item { margin-bottom: 2rem; }
+        .concept-item h3 { font-size: 1.1rem; color: #333; margin-bottom: 0.5rem; font-weight: 600; }
+        .concept-item p { font-size: 0.95rem; color: #555; line-height: 1.6; word-break: keep-all; }
+        .visual-equation { display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-top: 4rem; }
+        .icon-circle { width: 110px; height: 110px; border: 1px solid #cc3a3a; border-radius: 50%; display: flex; justify-content: center; align-items: center; }
+        .icon-circle img { max-width: 60%; max-height: 60%; }
+        .math-symbol { color: #cc3a3a; font-size: 1.5rem; font-weight: bold; }
+
+        /* === ⭐️ 5. 두 번째 모달 (Colors And Fonts) 전용 스타일 === */
+        /* Font 섹션 가로 정렬 */
+        .font-row {
+            display: flex; align-items: center; margin-bottom: 2rem; gap: 1.5rem;
+        }
+        .font-label { width: 40px; font-size: 0.85rem; font-weight: bold; color: #222; text-align: right; }
+        .font-preview { width: 140px; font-size: 2.5rem; color: #cc3a3a; }
+        
+        /* 개별 폰트 적용 */
+        .preview-alex { font-family: 'Alex Brush', cursive; font-size: 3.5rem; } /* 필기체는 살짝 더 크게 */
+        .preview-angkor { font-family: 'Angkor', serif; }
+        .preview-suit { font-family: 'SUIT', sans-serif; color: #333; font-weight: 500; }
+        
+        /* 선 긋기 및 끝의 동그라미(점) 만들기 */
+        .font-line { 
+            flex-grow: 1; height: 1px; background-color: #888; position: relative; 
+        }
+        .font-line::after { 
+            content: ''; position: absolute; right: -2px; top: -2px; 
+            width: 5px; height: 5px; border-radius: 50%; background-color: #222; 
+        }
+        
+        .font-name { width: 120px; font-weight: bold; font-size: 1.1rem; color: #222; font-family: 'Montserrat', sans-serif; }
+        .font-desc { width: 280px; font-size: 0.85rem; color: #555; line-height: 1.6; word-break: keep-all; }
+
+        /* Color 섹션 */
+        .color-section {
+            display: flex; justify-content: space-between; margin-top: 3rem; gap: 2rem;
+        }
+        .color-item {
+            display: flex; flex-direction: column; align-items: center; text-align: center; width: 30%;
+        }
+        .color-circle {
+            width: 150px; height: 150px; border-radius: 50%; 
+            display: flex; justify-content: center; align-items: center;
+            font-size: 1.1rem; font-weight: 500; font-family: 'Montserrat', sans-serif;
+            margin-bottom: 1.5rem;
+        }
+        /* 개별 원 색상 */
+        .circle-point { background-color: #cc3a3a; color: #ffffff; }
+        .circle-typo { background-color: #2b2b2b; color: #ffffff; }
+        .circle-bg { background-color: #eef5f6; color: #222; } /* 배경은 테두리 없이 깔끔하게 */
+        
+        .color-desc { font-size: 0.85rem; color: #555; line-height: 1.6; word-break: keep-all; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* 팝업 영역 */
+        /* === ⭐️ POPUP 섹션 스타일 === */
+        
+        .popup-section {
+            width: 100%;
+            max-width: 1400px; /* 전체 너비 제한 */
+            margin: 5rem auto; /* 위아래 여백과 가운데 정렬 */
+            padding: 0 2rem;
+            
+        }
+
+        .popup-title {
+            color: #cc3a3a;
+            font-family: 'Great Vibes', cursive;
+            font-size: 6.5rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+        }
+
+        .intro-box {
+            /* border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd; */
+            padding: 2.5rem 1rem;
+            margin-bottom: 5rem;
+        }
+
+        .intro-box p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+
+        /* 포트폴리오 블록 (하늘색 배경 영역) */
+        .portfolio-block {
+            background-color: #e2eff5; /* 디자인과 유사한 연한 하늘색 */
+            display: flex; /* 가로 정렬의 핵심! */
+            justify-content: space-between;
+            align-items: center;
+            padding: 4rem 3rem;
+            gap: 4rem; /* 왼쪽 텍스트와 오른쪽 이미지 사이의 간격 */
+        }
+
+        /* 왼쪽 텍스트 정보 */
+        .portfolio-info {
+            flex: 1; /* 1의 비율만큼 공간 차지 */
+        }
+
+        .portfolio-info h3 {
+            font-size: 1.6rem;
+            color: #222;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 800;
+        }
+
+        .title-icon {
+            width: 30px; /* 리본 아이콘 크기 */
+            height: auto;
+        }
+
+        .portfolio-info p {
+            color: #444;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        /* 오른쪽 이미지 3개 영역 */
+        .portfolio-images {
+            flex: 2.5; /* 텍스트보다 더 넓은(2.5) 비율의 공간 차지 */
+            display: flex;
+            gap: 1.5rem; /* 포스터 이미지들 사이의 간격 */
+            justify-content: flex-end;
+        }
+
+        .portfolio-images img {
+            width: 30%; /* 3개가 나란히 들어가도록 너비 설정 */
+            height: auto;
+            object-fit: cover; /* 이미지가 찌그러지지 않게 꽉 채움 */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* 입체감을 위한 그림자 */
+        }
+
+        /* 하단 레이스 장식 영역 */
+        .lace-divider {
+            height: 35px; /* 레이스 이미지 높이에 맞춰 수정하세요 */
+            width: 100%;
+            /* 실제 레이스 이미지가 있다면 아래 주석을 풀고 경로를 적어주세요! */
+            background-image: url('lace-pattern.png'); 
+            background-repeat: repeat-x; /* 가로로만 반복 */
+            background-size: contain;
+            margin-bottom: 4rem; /* 다음 블록과의 간격 */
+        }
+
+        /* 클릭 가능한 포스터 스타일 */
+        .clickable-poster {
+            cursor: pointer; /* 마우스를 올리면 손가락 모양으로 변경 */
+            transition: all 0.3s ease; /* 부드러운 애니메이션 효과 */
+            border: 3px solid transparent; /* 기본 상태에 투명 테두리 (크기 유지용) */
+            border-radius: 8px; /* 모서리를 살짝 둥글게 */
+        }
+
+        /* 마우스를 올렸을 때 살짝 위로 들리는 효과 */
+        .clickable-poster:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+        }
+
+        /* 클릭해서 활성화(선택)된 포스터의 스타일 */
+        .clickable-poster.active {
+            border: 3px solid #cc3a3a; /* 빨간색 테두리로 강조 */
+            transform: scale(1.02); /* 살짝 커지게 */
+        }
+
+
+
+
+        /* ⭐️ 새로 추가된 인터랙티브 선 컨테이너 스타일 */
+        .line-container {
+            width: 100%;
+            height: 100px; /* 마우스를 감지할 여유 공간 (위아래 50px씩) */
+            margin-top: -20px; /* 타이틀과의 간격 조절 */
+            margin-bottom: -50px; /* SVG의 중앙(50px)이 intro-box의 시작점과 만나도록 겹침 */
+            position: relative;
+            z-index: 10;
+        }
+
+        #elasticSvg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        /* ⭐️ 기존 intro-box 수정 */
+        .intro-box {
+            /* border-top: 1px solid #ddd;  <-- 이 줄은 반드시 삭제! (위쪽 테두리 제거) */
+            
+            padding: 2.5rem 1rem;
+            margin-bottom: 5rem;
+            position: relative; /* z-index를 위해 추가 */
+            z-index: 1; /* 선이 글자 위로 오도록 층 설정 */
+        }

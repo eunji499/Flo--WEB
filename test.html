@@ -3,26 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moments - Visitor Reviews</title>
-    <style>
-        /* 기본 초기화 */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        }
-
-        body {
-            color: #333;
-            background-color: #fff;
-            padding: 60px 20px;
-        }
-
-
-    </style>
+    <title>비밀의 문 - 앤티크 보석 및 유물 수집</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="./test.css">
 </head>
 <body>
+    <header>
+        <div class="container">
+            <h1><a href="#">비밀의 문</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">컬렉션</a></li>
+                    <li><a href="#">이야기</a></li>
+                    <li><a href="#">커뮤니티</a></li>
+                    <li><a href="#">내 컬렉션</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>시간의 비밀을 여는 열쇠</h2>
+                    <p>전 세계의 고대 열쇠, 자물쇠, 그리고 보석을 탐험하세요.</p>
+                    <a href="#" class="btn">탐험 시작하기</a>
+                </div>
+                <div class="hero-image">
+                    <img src="scorpion_key.png" alt="스콜피온 키">
+                    <img src="heart_lock.png" alt="하트 자물쇠">
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <h2>카테고리</h2>
+                <div class="category-grid">
+                    <div class="category-item">
+                        <img src="keys_category.png" alt="열쇠 카테고리">
+                        <h3>열쇠</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="locks_category.png" alt="자물쇠 카테고리">
+                        <h3>자물쇠</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="jewelry_category.png" alt="보석 카테고리">
+                        <h3>보석</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stories">
+            <div class="container">
+                <h2>전설 속의 이야기</h2>
+                <div class="story-grid">
+                    <article class="story-item">
+                        <img src="story1_thumb.png" alt="이야기 1 섬네일">
+                        <div class="story-content">
+                            <h3>잃어버린 열쇠의 비밀</h3>
+                            <p>전설에 따르면, 이 열쇠는 잃어버린 왕국의 보물 창고를 열 수 있다고 합니다.</p>
+                            <a href="#" class="more">더 읽어보기</a>
+                        </div>
+                    </article>
+                    <article class="story-item">
+                        <img src="story2_thumb.png" alt="이야기 2 섬네일">
+                        <div class="story-content">
+                            <h3>사랑의 자물쇠</h3>
+                            <p>이 자물쇠는 영원한 사랑을 상속하는 연인들에게 전해져 내려왔습니다.</p>
+                            <a href="#" class="more">더 읽어보기</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 비밀의 문. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
