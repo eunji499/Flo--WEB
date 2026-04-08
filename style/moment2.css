@@ -1,60 +1,96 @@
 .moments-section {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 80px 20px;
+  max-width: 1360px;
+  margin: 10rem auto;
+  
 }
 
 /* 헤더 스타일 (예약 섹션과 통일) */
 .moments-header { text-align: center; margin-bottom: 50px; }
-.section-title { color: #4A81E3; font-size: 24px; margin-bottom: 30px; }
-.tab-menu { margin-bottom: 40px; font-weight: bold; font-size: 14px; }
-.tab-menu span { margin: 0 15px; color: #4A81E3; cursor: pointer; }
-.tab-menu span.active { color: #FFB300; }
-.album-title { color: #4A81E3; font-size: 22px; margin-bottom: 8px; }
+.section-title { 
+  color: var( --pm-color-500); 
+  font-size: var(--fs-h1); 
+  margin-bottom: 5rem; }
 
-/* 그리드 레이아웃 핵심 */
+.tab-menu {
+  margin-bottom: 40px; 
+  font-weight: var(--fw-bold); 
+  font-size: var(--fs--bd1);
+  display: flex;
+  gap: 2rem; 
+  justify-content: center;
+  align-items: center;}
+
+.tab-menu li { 
+    font-size: var(--fs--bd1);
+    font-weight: var(--fw-med);
+    color: var(--pm-color-500);
+}
+.tab-menu li.active { color: var(--pi-color-400) }
+.album-title { 
+  color: var(--pm-color-500); 
+  font-size: var(--fs-h1); 
+  margin-bottom: 8px; }
+
+/* 그리드 레이아웃 */
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2열 배치 */
-  gap: 20px; /* 이미지 사이 간격 */
-  margin-bottom: 60px;
+  gap: 1rem; 
+  margin: 5rem 2rem;
 }
 
 .photo-item {
   width: 100%;
   overflow: hidden;
-  border-radius: 4px; /* 미세한 라운드 처리 */
+  border-radius: 4px; 
 }
 
 .photo-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 이미지가 찌그러지지 않게 채움 */
-  aspect-ratio: 3 / 4; /* 세로가 긴 비율 유지 (디자인 포인트) */
+  object-fit: cover; 
+  aspect-ratio: 3 / 4; 
   display: block;
   transition: transform 0.3s ease;
 }
 
-/* 이미지 호버 효과 (선택 사항) */
+/* 이미지 호버 효과 */
 .photo-item img:hover {
-  transform: scale(1.05); /* 마우스 올리면 살짝 확대 */
+  transform: scale(1.05); 
 }
 
 /* 페이지네이션 스타일 */
 .pagination {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 1rem;
 }
 
 .page-num {
-  font-size: 14px;
+  font-size: var(--fs-det);
   color: #888;
   cursor: pointer;
-  padding: 5px 10px;
+
 }
 
 .page-num.active {
   color: #333;
   font-weight: bold;
 }
+
+ @media (max-width: 1400px){
+   html{font-size: var(--basic-font-tab);}
+          }
+
+  @media (max-width: 1000px) {
+    html{
+          font-size: var(--basic-font-mo);
+            }}
+   @media (max-width: 768px){
+
+
+   }
+   @media (max-width: 500px){
+
+
+   }
