@@ -132,10 +132,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+        // 히어로 섹션
+        // 5. GSAP 플러그인 등록
+        // gsap.registerPlugin(ScrollTrigger);
 
+        // // --- 패럴럭스 타이포그래피 애니메이션 ---
+        // const parallaxItems = document.querySelectorAll('.parallax-item');
+        // const scrollDist = document.body.scrollHeight - window.innerHeight; // 총 스크롤 가능한 거리
 
+        // parallaxItems.forEach(item => {
+        //     const speed = item.dataset.speed; // 각 아이템의 속도 값
 
+        //     gsap.to(item, {
+        //         scrollTrigger: {
+        //             trigger: ".page-container", // 트리거 요소
+        //             start: "top top", // 애니메이션 시작 시점
+        //             end: "bottom top", // 애니메이션 종료 시점
+        //             scrub: true, // 스크롤에 직접 반응 (부드러운 스크롤)
+        //             markers: false, // 디버깅용 마커 (필요시 true로 변경)
+        //         },
+        //         // 스크롤 거리에 따라 위로 이동. 
+        //         // data-speed 값이 클수록 더 빨리 위로 이동합니다.
+        //         y: -(speed * window.innerHeight * 0.5), // 이동 거리 계산
+        //         ease: "none"
+        //     });
+        // });
 
+        // --- 열쇠 부유 애니메이션 ---
+        const floatingKey = document.querySelector('.floating-key');
+
+        // 위아래 두둥실
+        gsap.to(floatingKey, {
+            duration: 3, // 애니메이션 지속 시간 (초)
+            y: "-=20", // 위로 20px 이동
+            x: "+=10", // 오른쪽으로 10px 이동 (약간의 수평 이동)
+            repeat: -1, // 무한 반복
+            yoyo: true, // 반대로 반복 (갔다 왔다)
+            ease: "sine.inOut" // 부드러운 시작과 끝
+        });
+
+        
 
 
 

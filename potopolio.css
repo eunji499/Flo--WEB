@@ -266,3 +266,92 @@
             position: relative; /* z-index를 위해 추가 */
             z-index: 1; /* 선이 글자 위로 오도록 층 설정 */
         }
+
+
+
+
+
+
+
+
+
+        /* 히어로 섹션 */
+        /* 기본 스타일 리셋 */
+        body, h1, p { margin: 0; padding: 0; }
+        
+        body {
+            /* 2. 이미지의 밝은 민트색 배경 */
+            background-color: #F0F8FF;
+            font-family: 'Noto Sans KR', sans-serif;
+            overflow-x: hidden; /* 가로 스크롤 방지 */
+            height: 200vh; /* 패럴럭스 효과를 보기 위해 스크롤 가능한 높이 설정 */
+        }
+
+        /* 메인 컨테이너 */
+        .page-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 100vh;
+            padding: 0 10vw;
+            box-sizing: border-box;
+            position: fixed; /* 패럴럭스를 위해 화면에 고정 */
+            top: 0;
+            left: 0;
+        }
+
+        /* 텍스트 섹션 스타일 */
+        .text-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 50%;
+        }
+
+        /* 타이포그래피별 유사 폰트 및 스타일 */
+        .script-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: 5rem;
+            color: #C0392B; /* 이미지의 빨간색과 유사 */
+        }
+
+        .serif-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            color: #C0392B;
+            font-weight: 700;
+        }
+
+        .desc-text {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 1.2rem;
+            color: #555; /* 진한 회색 */
+            line-height: 1.6;
+        }
+
+        .author-text {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 1rem;
+            color: #777; /* 더 연한 회색 */
+        }
+
+        /* 이미지 섹션 스타일 */
+        .image-section {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .floating-key {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            position: relative; /* GSAP 애니메이션을 위해 */
+        }
+
+        /* 패럴럭스 아이템을 위한 기본 스타일 (JS에서 사용) */
+        .parallax-item {
+            position: relative;
+        }
