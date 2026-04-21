@@ -18,8 +18,8 @@
 
 /* 상단 텍스트 스타일 */
 .content-top {
-    width: 1360px;
-    margin: 0 auto;
+    /* width: 1360px; */
+    margin: 0 2rem;
     margin-bottom: 400px;
 }
 
@@ -267,7 +267,13 @@
 .connector.left::after { left: -5px; }
 .connector2.right::after { right: -5px; }
 
+.overlay-box p{
+  margin-bottom: 2rem;
+}
 
+.overlay-box #ma-tp{
+  margin-bottom: 2rem;
+}
 
 
 
@@ -275,10 +281,34 @@
 
 
 /* 반응형 모바일 */
+
+
+
+
+@media (max-width: 2020px){
+  .sub-description {
+    left: 95vh;
+}
+
+}
+@media (max-width: 1850px){
+  .sub-description {
+    left: 75vh;
+}
+
+}
+@media (max-width: 1600px){
+  .sub-description {
+    left: 65vh;
+}
+
+}
+
+
 @media (max-width: 1440px){
   html{font-size: var(--basic-font-tab);}
-  .content-top {
-      width: 1000px;}
+  /* .content-top {
+      width: 1000px;} */
   .sub-description {
     left: 83vh;}
   .reveal {
@@ -288,12 +318,48 @@
   .main-title.reveal {
     width: 100%;
 }
+.connector-line {
+  display: none;
+}
+.sub-description {
+    position: inherit;
+    left: 110vh;
+    margin-top: 316px;
+}
+.img-can {
+    width: inherit;
+    height: 450px;
+    margin-right: 20px;
+    transform: rotate(-10deg) translateX(20px);
+    z-index: 2;
+    animation: floating 4s ease-in-out infinite;
+}
+.img-cup {
+    width: inherit;
+    height: 450px;
+    transform: rotate(10deg) translateX(20px);
+    margin-top: 400px;
+    animation: floating-slow 6s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+.content-bottom {
+    position: inherit;
+    bottom:inherit;
+    background: transparent;
+    backdrop-filter:inherit;
+    
+    border-radius: 50% 50%;
+    margin-bottom: 3rem;
+}
+.bg-container {
+    height: 80%;
+}
 }
 
 @media (max-width: 1000px){
   html{font-size: var(--basic-font-tab);}
-  .content-top {
-      width: 800px;}
+  /* .content-top {
+      width: 800px;} */
   .avoid-list {
     margin-top: 750px;
 }
@@ -301,11 +367,37 @@
 
 @media (max-width: 768px){
   html{font-size: var(--basic-font-mo);}
-  .content-top {
-      width: 500px;}
+  /* .content-top {
+      width: 500px;} */
+      .color-circle {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
 }
 
-@media (max-width: 500px){
-  .content-top {
-      width: 300px;}
+@media (max-width: 550px){
+  /* .content-top {
+      width: 300px;} */
+     
+      .color-circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    .connector{
+      display: none;
+    }
+    .connector2{
+      display: none;
+    }
+    .color-row {
+    display: flex;
+    flex-direction: column;
+}
+.color-row.reverse {
+    flex-direction: column;
+}
 }
