@@ -210,10 +210,16 @@
                 <div class="pagination"></div>
             </div>
             <script>
-                const heroSwiper = new Swiper('.swiper', {
+                const heroSwiper = new Swiper('.hero-slider', {
                     // Optional parameters
                     // direction: 'vertical',
                     loop: true,
+
+                    // Autoplay every 3000ms (3s)
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
 
                     // If we need pagination
                     pagination: {
@@ -230,7 +236,7 @@
                     scrollbar: {
                         el: '.swiper-scrollbar',
                     },
-                    });
+                });
             </script>
 
 
